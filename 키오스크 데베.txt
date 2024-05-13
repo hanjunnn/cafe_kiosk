@@ -1,0 +1,74 @@
+create database kt_cafe;
+
+use kt_cafe;
+
+drop table kt_menu;
+
+create table kt_menu(
+num int key auto_increment,
+cname char(100) not null,
+ccost int not null);
+
+insert into kt_menu values("","HOT아메리카노","1500원");
+insert into kt_menu values("","ICE아메리카노","1500원");
+insert into kt_menu values("","HOT카페라떼","2900원");
+insert into kt_menu values("","ICE카페라떼","2900원");
+insert into kt_menu values("","HOT바닐라라떼","3300원");
+insert into kt_menu values("","ICE바닐라라떼","3300원");
+insert into kt_menu values("","HOT헤이즐넛라떼","3300원");
+insert into kt_menu values("","ICE헤이즐넛라떼","3300원");
+insert into kt_menu values("","HOT카라멜마끼아또","3300원");
+insert into kt_menu values("","ICE카라멜마끼아또","3300원");
+insert into kt_menu values("","HOT카페모카","3500원");
+insert into kt_menu values("","ICE카페모카","3500원");
+
+insert into kt_menu values("","딸기스무디","3800원");
+insert into kt_menu values("","망고스무디","3800원");
+insert into kt_menu values("","블루베리스무디","3800원");
+insert into kt_menu values("","유자스무디","3800원");
+insert into kt_menu values("","딸기요거트스무디","4000원");
+insert into kt_menu values("","망고요거트스무디","4000원");
+insert into kt_menu values("","블루베리요거트스무디","4000원");
+insert into kt_menu values("","플레인요거트스무디","4000원");
+insert into kt_menu values("","리얼초코자바칩프라페","4000원");
+insert into kt_menu values("","쿠키초코프라페","4000원");
+insert into kt_menu values("","민트초코오레오프라페","4000원");
+insert into kt_menu values("","그린티프라페","4000원");
+
+insert into kt_menu values("","블루레몬 스페셜에이드","3500원");
+insert into kt_menu values("","청포도 스페셜에이드","3500원");
+insert into kt_menu values("","패션후르츠 스페셜에이드","3500원");
+insert into kt_menu values("","자몽에이드","3500원");
+insert into kt_menu values("","레몬에이드","3500원");
+insert into kt_menu values("","망고에이드","3500원");
+insert into kt_menu values("","유자에이드","3500원");
+insert into kt_menu values("","복숭아주스","3800원");
+insert into kt_menu values("","키위주스","3800원");
+insert into kt_menu values("","오렌지당근주스","3800원");
+insert into kt_menu values("","샤인파인케일주스","3800원");
+
+insert into kt_menu values("","HOT 자몽허니블랙티","3800원");
+insert into kt_menu values("","ICE 자몽허니블랙티","3800원");
+insert into kt_menu values("","HOT 페퍼민트","3000원");
+insert into kt_menu values("","ICE 페퍼민트","3000원");
+insert into kt_menu values("","HOT 캐모마일","3000원");
+insert into kt_menu values("","ICE 캐모마일","3000원");
+insert into kt_menu values("","HOT 로즈마리","3000원");
+insert into kt_menu values("","ICE 로즈마리","3000원");
+insert into kt_menu values("","HOT 얼그레이","3000원");
+insert into kt_menu values("","ICE 얼그레이","3000원");
+insert into kt_menu values("","HOT 레몬티","3000원");
+insert into kt_menu values("","ICE 레몬티","3000원");
+번호 1,2,3,4,
+이름  
+가격  
+
+<?php
+        $dbcon = mysqli_connect('localhost', 'root', '');
+        mysqli_select_db($dbcon, 'kt_cafe');
+        $query = "select * from kt_menu";
+        $result = mysqli_query($dbcon, $query);
+        $row = mysqli_fetch_array($result);
+        mysqli_close($dbcon);
+        ?>
+
